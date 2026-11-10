@@ -1,0 +1,63 @@
+// Минималистичные линейные иконки в духе SF Symbols (24×24, stroke 1.8)
+const P = {
+  home: '<path d="M3.5 10.5 12 3.5l8.5 7"/><path d="M5.5 9v10.5a1 1 0 0 0 1 1H10v-6h4v6h3.5a1 1 0 0 0 1-1V9"/>',
+  book: '<path d="M12 6.4C10.3 4.9 7.8 4.4 4 4.4v14c3.8 0 6.3.5 8 2 1.7-1.5 4.2-2 8-2v-14c-3.8 0-6.3.5-8 2Z"/><path d="M12 6.4v14"/>',
+  sparkles: '<path d="M11 3.5 12.7 8l4.5 1.7-4.5 1.8L11 16l-1.7-4.5L4.8 9.7 9.3 8z"/><path d="M18.5 14.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>',
+  beads: '<circle cx="12" cy="4.6" r="1.7"/><circle cx="17.2" cy="6.8" r="1.7"/><circle cx="19.4" cy="12" r="1.7"/><circle cx="17.2" cy="17.2" r="1.7"/><circle cx="12" cy="19.4" r="1.7"/><circle cx="6.8" cy="17.2" r="1.7"/><circle cx="4.6" cy="12" r="1.7"/><circle cx="6.8" cy="6.8" r="1.7"/>',
+  sliders: '<path d="M4 6.5h9M17 6.5h3M4 12h3M11 12h9M4 17.5h11M19 17.5h1"/><circle cx="15" cy="6.5" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="17.5" r="2"/>',
+  play: '<path d="M7.5 4.8v14.4c0 .8.9 1.3 1.6.8l11-7.2c.6-.4.6-1.2 0-1.6l-11-7.2c-.7-.5-1.6 0-1.6.8Z" fill="currentColor" stroke="none"/>',
+  pause: '<rect x="6" y="4.5" width="4.2" height="15" rx="1.3" fill="currentColor" stroke="none"/><rect x="13.8" y="4.5" width="4.2" height="15" rx="1.3" fill="currentColor" stroke="none"/>',
+  next: '<path d="M4.5 6.2v11.6c0 .7.8 1.2 1.4.7l8-5.8c.5-.4.5-1.1 0-1.4l-8-5.8c-.6-.5-1.4 0-1.4.7Z" fill="currentColor" stroke="none"/><rect x="16" y="5" width="3" height="14" rx="1.2" fill="currentColor" stroke="none"/>',
+  prev: '<path d="M19.5 6.2v11.6c0 .7-.8 1.2-1.4.7l-8-5.8c-.5-.4-.5-1.1 0-1.4l8-5.8c.6-.5 1.4 0 1.4.7Z" fill="currentColor" stroke="none"/><rect x="5" y="5" width="3" height="14" rx="1.2" fill="currentColor" stroke="none"/>',
+  repeat: '<path d="M17 2.5 20 5.5l-3 3"/><path d="M4 11V9.5a4 4 0 0 1 4-4h12"/><path d="M7 21.5l-3-3 3-3"/><path d="M20 13v1.5a4 4 0 0 1-4 4H4"/>',
+  bookmark: '<path d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z"/>',
+  "bookmark-fill": '<path d="M6.5 3.5h11a1 1 0 0 1 1 1v16l-6.5-4.2-6.5 4.2v-16a1 1 0 0 1 1-1Z" fill="currentColor"/>',
+  share: '<path d="M12 3.5v12"/><path d="M8 7.5l4-4 4 4"/><path d="M6 11.5H5.5a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1H18"/>',
+  copy: '<rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2.5"/><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"/>',
+  search: '<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/>',
+  "chevron-right": '<path d="m9.5 5.5 6.5 6.5-6.5 6.5"/>',
+  "chevron-left": '<path d="M14.5 5.5 8 12l6.5 6.5"/>',
+  "chevron-down": '<path d="m5.5 9.5 6.5 6.5 6.5-6.5"/>',
+  x: '<path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/>',
+  check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6 6 6M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/>',
+  sunrise: '<path d="M17 18.5a5 5 0 0 0-10 0"/><path d="M12 3v6M8.5 6 12 2.5 15.5 6"/><path d="M4.5 11.5 6 13M19.5 11.5 18 13M2 18.5h2M20 18.5h2M3 21.5h18"/>',
+  sunset: '<path d="M17 18.5a5 5 0 0 0-10 0"/><path d="M12 2.5v6M8.5 5 12 8.5 15.5 5"/><path d="M4.5 11.5 6 13M19.5 11.5 18 13M2 18.5h2M20 18.5h2M3 21.5h18"/>',
+  moon: '<path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.6 6.6 0 0 0 9.7 9.7Z"/>',
+  mosque: '<path d="M12 2v1.8"/><path d="M12 3.8c-2.8 1.6-5 3.6-5 6.2h10c0-2.6-2.2-4.6-5-6.2Z"/><path d="M6 10h12v10.5H6z"/><path d="M10 20.5v-3.3a2 2 0 0 1 4 0v3.3"/><path d="M3 20.5V12M21 20.5V12M2 20.5h20"/>',
+  bed: '<path d="M2.5 19V6"/><path d="M2.5 14.5h19V19"/><path d="M21.5 14.5v-2a3.5 3.5 0 0 0-3.5-3.5h-7v5.5"/><circle cx="6.8" cy="11.2" r="2"/>',
+  list: '<path d="M9 6.5h11M9 12h11M9 17.5h11"/><circle cx="4.8" cy="6.5" r=".9" fill="currentColor"/><circle cx="4.8" cy="12" r=".9" fill="currentColor"/><circle cx="4.8" cy="17.5" r=".9" fill="currentColor"/>',
+  cards: '<rect x="6.5" y="4" width="11" height="16" rx="2.5"/><path d="M3 7v10M21 7v10"/>',
+  download: '<path d="M12 3.5v11.5"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 20.5h14"/>',
+  trash: '<path d="M4 6.5h16M9.5 6.5V4.5h5v2M6 6.5l1 13a1.5 1.5 0 0 0 1.5 1.5h7a1.5 1.5 0 0 0 1.5-1.5l1-13M10 10.5v6M14 10.5v6"/>',
+  reset: '<path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4.5V9h4.5"/>',
+  minus: '<path d="M6 12h12"/>',
+  plus: '<path d="M12 6v12M6 12h12"/>',
+  gauge: '<path d="M4 17.5a8.5 8.5 0 1 1 16 0"/><path d="m12 14 4-4.5"/><circle cx="12" cy="14" r="1.3" fill="currentColor"/>',
+  headphones: '<path d="M4 18.5V13a8 8 0 0 1 16 0v5.5"/><path d="M20 19a2 2 0 0 1-2 2h-1.5v-6.5H20zM4 19a2 2 0 0 0 2 2h1.5v-6.5H4z"/>',
+  text: '<path d="M4.5 7V5h15v2M12 5v14.5M9 19.5h6"/>',
+  palette: '<path d="M12 21a9 9 0 1 1 9-9c0 2.5-2 3.6-3.6 3.6h-1.8a1.8 1.8 0 0 0-1.3 3c.6.6.3 2.4-2.3 2.4Z"/><circle cx="7.6" cy="11" r="1.1" fill="currentColor"/><circle cx="10.4" cy="7.3" r="1.1" fill="currentColor"/><circle cx="15" cy="7.5" r="1.1" fill="currentColor"/>',
+  vibrate: '<rect x="7.5" y="4" width="9" height="16" rx="2"/><path d="M4 9v6M20 9v6"/>',
+  info: '<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.7v.1"/>',
+  cloud: '<path d="M7 18.5a4.5 4.5 0 1 1 .9-8.9 6 6 0 0 1 11.6 1.9A3.5 3.5 0 0 1 18.5 18.5Z"/>',
+  more: '<circle cx="5.5" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="18.5" cy="12" r="1.5" fill="currentColor" stroke="none"/>',
+  globe: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.3 2.4 3.5 5.2 3.5 8.5s-1.2 6.1-3.5 8.5c-2.3-2.4-3.5-5.2-3.5-8.5s1.2-6.1 3.5-8.5Z"/>',
+  fullscreen: '<path d="M4 9V4.5h4.5M20 9V4.5h-4.5M4 15v4.5h4.5M20 15v4.5h-4.5"/>',
+  phone: '<rect x="6.5" y="2.5" width="11" height="19" rx="2.8"/><path d="M12 9v6M9 12h6"/>',
+  volume: '<path d="M4 9.5v5h3.5L12 18.5v-13L7.5 9.5Z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/>',
+  hand: '<path d="M8 13V5.8a1.6 1.6 0 0 1 3.2 0V11"/><path d="M11.2 10.5V4.6a1.6 1.6 0 0 1 3.2 0v6"/><path d="M14.4 10.6V6a1.6 1.6 0 0 1 3.2 0v8.5a7 7 0 0 1-7 7h-.4a6 6 0 0 1-4.6-2.2L3.3 16a1.6 1.6 0 0 1 2.4-2.1L8 16"/>',
+  star: '<path d="m12 2.8 2.1 4.9 5.1-.2-3.2 4 2.5 4.5-5-1.2L12 19.6l-1.5-4.8-5 1.2 2.5-4.5-3.2-4 5.1.2Z"/>',
+  layers: '<path d="m12 3.5 8.5 4.5-8.5 4.5L3.5 8z"/><path d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16l8.5 4.5 8.5-4.5"/>',
+  undo: '<path d="M9 14.5 4.5 10 9 5.5"/><path d="M4.5 10h10a5 5 0 0 1 0 10H11"/>',
+  edit: '<path d="M4 20h4L19 9a2.8 2.8 0 0 0-4-4L4 16z"/>',
+  target: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/>',
+  type: '<path d="M3.5 18.5 9 5.5l5.5 13M5.5 14h7"/><path d="M15.5 12.5a2.8 2.8 0 0 1 5 1.7v4.3M20.5 15.5h-2.7a2 2 0 0 0 0 4c1.6 0 2.7-1.2 2.7-3"/>',
+};
+
+export function icon(name, size = 22, cls = "") {
+  const span = document.createElement("span");
+  span.className = `ic ${cls}`.trim();
+  span.setAttribute("aria-hidden", "true");
+  span.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${P[name] || ""}</svg>`;
+  return span;
+}

@@ -1,0 +1,11 @@
+# Архивы и черновые файлы, которые не нужны в репозитории
+*.zip
+icon-screenshot.png
+
+# Локальные настройки Claude Code
+.claude/
+
+# Системный мусор
+Thumbs.db
+desktop.ini
+.DS_Store

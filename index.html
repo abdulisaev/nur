@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru" data-theme="light" data-glass="normal" data-motion="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#eef0f6">
+  <meta name="color-scheme" content="light dark">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Нур">
+  <meta name="description" content="Достоверные азкары с транскрипцией и переводом, тасбих-счётчик и Коран с переводом смыслов и 20 чтецами. Работает офлайн и как Mini App в Telegram.">
+  <title>Нур — Азкары и Коран</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    // Ранняя установка темы — без вспышки при запуске
+    (function () {
+      try {
+        var rec = JSON.parse(localStorage.getItem("nur:settings") || "null");
+        var s = (rec && rec.v) || {};
+        var t = s.theme || "auto";
+        if (t === "auto" || t === "telegram") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        var d = document.documentElement;
+        d.dataset.theme = t;
+        d.dataset.glass = s.glass || "normal";
+        d.dataset.motion = s.animatedBg === true && s.v >= 2 ? "on" : "off";
+      } catch (e) {}
+    })();
+  </script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true">
+    <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="blob b4"></i><i class="grain"></i>
+  </div>
+  <div id="app">
+    <main id="pages"></main>
+    <div id="player-slot"></div>
+    <nav id="tabbar" class="tabbar glass" aria-label="Разделы"></nav>
+  </div>
+  <div id="overlay-root"></div>
+  <noscript><p style="padding:24px;font-family:sans-serif">Для работы приложения включите JavaScript.</p></noscript>
+</body>
+</html>
